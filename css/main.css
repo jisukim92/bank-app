@@ -1,0 +1,103 @@
+@charset 'utf-8';
+@import url(./reset.css);
+
+body {
+  font: normal 16px 'Noto Sans Korean', sans-serif;
+  /* line-height: 1.3;
+  color: #000;
+  background-color: #666666;
+  margin: 0;
+  padding: 0; */
+}
+
+.container {
+  width: 375px;
+  background-color: #eeece5;
+}
+
+/* 컨테이터1 */
+header {
+  /* border: 1px solid red; */
+  width: 375px;
+  margin-bottom: 33px;
+}
+.title-wrap {
+  width: 327px;
+  margin: auto;
+  overflow: hidden;
+}
+.title-wrap__avater {
+  float: left;
+  /* margin-left: 27px; */
+}
+.title-wrap__avater img {
+  vertical-align: middle;
+  margin-right: 85px;
+}
+/* .title-wrap__title { */
+/* line-height: 30px; */
+/* } */
+.title-wrap__icon {
+  float: right;
+  padding-top: 9px;
+}
+#icon {
+  margin-right: 18px;
+}
+
+/* 메인 */
+.account_status {
+  width: 279px;
+  height: 155px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 3px burlywood;
+  margin: auto;
+}
+.bank-account div {
+  float: left;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.bank-account div:nth-child(1) {
+  margin-left: 73px;
+  margin-right: 27px;
+  color: #999;
+  font-size: 14px;
+}
+.bank-account div:nth-child(2) {
+  font-weight: 700;
+  font-size: 14px;
+}
+.total-amount {
+  clear: both;
+  text-align: center;
+  font-size: 14px;
+}
+.total-amount span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* 그래프 */
+.graph {
+  height: 17px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.graph div {
+  float: left;
+}
+.graph_img {
+  margin-left: 30px;
+}
+.graph_icon {
+  margin-left: 10px;
+}
+.goal {
+  clear: both;
+  /* padding-top: 8px; */
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
