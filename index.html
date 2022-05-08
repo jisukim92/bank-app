@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/chart.css" />
+    <script src="./js/index.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>BankApp</title>
+  </head>
+  <body>
+    <section class="slide">
+      <div><img src="./img/아이폰 상태바.svg" alt="" /></div>
+      <header class="header">
+        <div class="title-wrap__avatar">
+          <img src="./img/아바타.svg" alt="" />
+        </div>
+        <h2 class="title-wrap__title">생활비</h2>
+        <div class="title-wrap__icon-wrap">
+          <i class="icon1"
+            ><a href=""><img src="./img/간편결제아이콘.svg" alt="" /></a
+          ></i>
+          <i class="icon2"
+            ><a href=""><img src="./img/검색아이콘.svg" alt="" /></a
+          ></i>
+        </div>
+      </header>
+      <article id="account-status">
+        <div class="bank-account">
+          <div class="account">355-678377-78773</div>
+          <div class="transfer"><a href="">이체</a></div>
+        </div>
+        <div class="total-amount"><span>1,240,000</span>원</div>
+        <div class="graph-wrap">
+          <div class="graph"><img src="./img/Group 37.svg" alt="" /></div>
+          <a class="graph-btn" onclick="getGraph()">
+            <img src="./img/mdi_bar_chart.svg" alt="" />
+          </a>
+        </div>
+        <div class="balance-amount">5일 동안 210,000원 남음</div>
+      </article>
+      <div class="middle-text">
+        지금 낮은 이자로 생활대출을 신청하세요!<a href="">GO</a>
+      </div>
+      <article id="history-wrap">
+        <div class="history">
+          <div class="drag-btn"><img src="./img/올림버튼.svg" alt="" /></div>
+          <div class="goal-detail">
+            <ul class="goal-wrap">
+              <li class="goal-btn">
+                <div class="goal-red">
+                  <div class="btn-text">
+                    <div class="text-goal">여행가자!</div>
+                    <div class="text-amount">842,200원</div>
+                  </div>
+                </div>
+              </li>
+              <li class="goal-btn">
+                <div class="goal-red">
+                  <div class="btn-text">
+                    <div class="text-goal">여행가자!</div>
+                    <div class="text-amount">842,200원</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="history-scroll">
+            <div class="history-day"></div>
+            <!-- <div class="day-money-wrap">
+              <div class="day-use__wrap">
+                <p class="day">어제</p>
+                <p class="day-spend">127,600원 지출</p>
+              </div>
+              <ul class="money-history">
+                <li class="history__list">
+                  <p class="item">미스터피자</p>
+                  <p class="price">32,000</p>
+                </li>
+                <li class="history__list">
+                  <p class="item">미스터피자</p>
+                  <p class="price">32,000</p>
+                </li>
+                <li class="history__list">
+                  <p class="item">미스터피자</p>
+                  <p class="price">32,000</p>
+                </li>
+                <li class="history__list">
+                  <p class="item">미스터피자</p>
+                  <p class="price">32,000</p>
+                </li>
+                <li class="history__list">
+                  <p class="item">미스터피자</p>
+                  <p class="price">32,000</p>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </article>
+      <nav id="nav">
+        <div class="nav-test">
+          <ul class="nav__icon-wrap">
+            <li class="nav-icon1">
+              <img src="./img/nav_btn-home.svg" alt="" />
+            </li>
+            <li class="nav-icon2">
+              <img src="./img/nav_btn-switch.svg" alt="" />
+            </li>
+            <li class="nav-icon3">
+              <img src="./img/nav_btn-message.svg" alt="" />
+            </li>
+            <li class="nav-icon4">
+              <img src="./img/nav-btn-more.svg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <section class="slide chart hidden">
+      <div><img src="./img/아이폰 상태바.svg" alt="" /></div>
+      <div class="close">닫기</div>
+      <div class="management">
+        <div class="title">지출 관리</div>
+        <article class="base_graph">
+          <div class="base">
+            <div class="base_text">기준금액설정</div>
+            <div class="base_amount">2,100,000원</div>
+          </div>
+          <div class="line_graph">
+            <img src="./img/기준 설정바.svg" alt="" />
+          </div>
+        </article>
+        <article class="daliy_report">
+          <div class="daliy_title">일간 리포트</div>
+          <div class="daliy_graph"><canvas id="myChart"></canvas></div>
+        </article>
+        <article class="pattern_report">
+          <div class="pattern_title">9월 지출 패턴</div>
+          <div class="pattern_graph">원 그래프</div>
+          <div class="type_list">
+            <ul>
+              <li>
+                <div class="type_img">이미지</div>
+                <div class="type_text">주유비</div>
+                <div class="type_amount">가격</div>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+.chart {
+  background-color: #fff;
+}
+.management {
+  width: 24vw;
+  /* position: relative; */
+}
+.close {
+  text-align: right;
+  margin-right: 10px;
+}
+/* 지출관리 */
+.title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 30px;
+}
+.base {
+  height: 32px;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+.base_text,
+.daliy_title,
+.pattern_title {
+  color: #444444;
+  font-size: 18px;
+}
+.base_amount {
+  color: #ff5f00;
+  font-size: 24px;
+  font-weight: 500;
+}
+.line_graph {
+  text-align: center;
+  margin-bottom: 59px;
+}
+.daliy_report {
+  margin: 30px;
+}
+.pattern_report {
+  margin: 30px;
+}
