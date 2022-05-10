@@ -10,11 +10,14 @@ body {
   margin: 0;
   padding: 0; */
 }
+
 .slide {
   /* width: 375px;
-  height: 43px; */
-  max-width: 24vw;
+  height: 43px; 
   height: 53vw;
+  */
+  max-width: 24vw;
+  height: 48vw;
   background-color: #eeece5;
   margin: auto;
   overflow: hidden;
@@ -118,10 +121,15 @@ body {
   margin-bottom: 2vw;
 }
 /* 이력 란 */
+#history-wrap {
+  height: 53vw;
+  position: absolute;
+}
 .history {
+  width: 20vw;
   height: 53vw;
   background-color: #f5f5f5;
-  border-radius: 1vw 1vw 0vw 0vw;
+  border-radius: 35px 35px 0px 0px;
   padding: 0vw 2vw 0vw 2vw;
   overflow: hidden;
 }
@@ -142,14 +150,14 @@ body {
 }
 /* ul */
 .goal-wrap {
+  width: 24vw;
+  border-radius: 5px;
   height: 3vw;
   display: flex;
   justify-content: flex-start;
 }
 /* li */
 .goal-btn {
-  border-radius: 5px;
-  border: 1px solid red;
   width: 10vw;
   height: 3vw;
   background-color: #dadada;
@@ -158,11 +166,24 @@ body {
   /* overflow: auto; */
 }
 .goal-red {
+  border-radius: 5px 0 0 5px;
   width: 70%;
   height: 100%;
   background-color: #ff5f00;
   position: relative;
 }
+.goal-yellow {
+  border-radius: 5px 0 0 5px;
+  width: 80%;
+  height: 100%;
+  background-color: #feb700;
+  position: relative;
+}
+.goal-plus {
+  color: #ff5f00;
+  font-size: 12px;
+}
+
 .btn-text {
   left: 5px;
   top: 6px;
@@ -171,7 +192,7 @@ body {
 
 .history-scroll {
   width: 40vw;
-  height: 20vw;
+  height: 19vw;
   overflow-y: auto;
 }
 .history-scroll::-webkit-scrollbar {
@@ -236,4 +257,42 @@ nav ul {
 }
 
 nav li {
+}
+
+.management {
+  overflow-y: scroll;
+  height: 41vw;
+}
+.management::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.pattern_title {
+  color: #444444;
+  font-size: 18px;
+  font-weight: 500;
+}
+.type_list > ul > li {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.type_img {
+  width: 30px;
+  text-align: center;
+}
+.type_info {
+  display: flex;
+  justify-content: space-between;
+}
+.type_text {
+  font-size: 18px;
+  color: #000;
+  margin-left: 13px;
+}
+
+.type_amount {
+  font-size: 18px;
+  color: #858585;
+  margin-left: 13px;
 }

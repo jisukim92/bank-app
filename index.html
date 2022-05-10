@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/chart.css" />
-    <script src="./js/index.js"></script>
-    <script src="./js/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/chart.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>BankApp</title>
   </head>
   <body>
     <section class="slide">
-      <div><img src="./img/아이폰 상태바.svg" alt="" /></div>
+      <div class="top-bar"><img src="./img/아이폰 상태바.svg" alt="" /></div>
       <header class="header">
         <div class="title-wrap__avatar">
           <img src="./img/아바타.svg" alt="" />
@@ -47,7 +48,9 @@
       </div>
       <article id="history-wrap">
         <div class="history">
-          <div class="drag-btn"><img src="./img/올림버튼.svg" alt="" /></div>
+          <div class="drag-btn">
+            <img src="./img/올림버튼.svg" alt="" />
+          </div>
           <div class="goal-detail">
             <ul class="goal-wrap">
               <li class="goal-btn">
@@ -59,11 +62,16 @@
                 </div>
               </li>
               <li class="goal-btn">
-                <div class="goal-red">
+                <div class="goal-yellow">
                   <div class="btn-text">
-                    <div class="text-goal">여행가자!</div>
-                    <div class="text-amount">842,200원</div>
+                    <div class="text-goal">냉장고사기!</div>
+                    <div class="text-amount">142,200원</div>
                   </div>
+                </div>
+              </li>
+              <li class="goal-plus-btn">
+                <div class="goal-plus">
+                  <img src="./img/plus.svg" alt="" />저금통 만들기
                 </div>
               </li>
             </ul>
@@ -123,8 +131,8 @@
     <section class="slide chart hidden">
       <div><img src="./img/아이폰 상태바.svg" alt="" /></div>
       <div class="close">닫기</div>
+      <div class="title">지출 관리</div>
       <div class="management">
-        <div class="title">지출 관리</div>
         <article class="base_graph">
           <div class="base">
             <div class="base_text">기준금액설정</div>
@@ -136,17 +144,19 @@
         </article>
         <article class="daliy_report">
           <div class="daliy_title">일간 리포트</div>
-          <div class="daliy_graph"><canvas id="myChart"></canvas></div>
+          <div class="daliy_graph"><canvas id="lineBarChart"></canvas></div>
         </article>
         <article class="pattern_report">
-          <div class="pattern_title">9월 지출 패턴</div>
-          <div class="pattern_graph">원 그래프</div>
+          <div class="pattern_title"></div>
+          <div class="pattern_graph"><canvas id="doughnutChart"></canvas></div>
           <div class="type_list">
             <ul>
               <li>
-                <div class="type_img">이미지</div>
-                <div class="type_text">주유비</div>
-                <div class="type_amount">가격</div>
+                <!-- <div class="type_info">
+                  <div class="type_img">이미지</div>
+                  <div class="type_text">주유비</div>
+                </div>
+                <div class="type_amount">가격</div> -->
               </li>
             </ul>
           </div>
