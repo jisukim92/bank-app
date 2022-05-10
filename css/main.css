@@ -17,7 +17,8 @@ body {
   height: 53vw;
   */
   max-width: 24vw;
-  height: 48vw;
+  /* height: 812px; */
+  height: 100vh;
   background-color: #eeece5;
   margin: auto;
   overflow: hidden;
@@ -146,11 +147,15 @@ body {
   margin-bottom: 1vw;
   color: white;
   font-size: 12px;
-  overflow: hidden;
+  overflow-x: scroll;
 }
+.goal-detail::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
 /* ul */
 .goal-wrap {
-  width: 24vw;
+  width: 375px;
   border-radius: 5px;
   height: 3vw;
   display: flex;
@@ -158,30 +163,45 @@ body {
 }
 /* li */
 .goal-btn {
-  width: 10vw;
-  height: 3vw;
+  width: 162px;
+  height: 47px;
   background-color: #dadada;
   border-radius: 5px;
   margin-right: 1vw;
   /* overflow: auto; */
 }
-.goal-red {
+.goal {
   border-radius: 5px 0 0 5px;
-  width: 70%;
-  height: 100%;
-  background-color: #ff5f00;
   position: relative;
 }
 .goal-yellow {
   border-radius: 5px 0 0 5px;
+  position: relative;
+}
+.goal.red {
+  width: 70%;
+  height: 100%;
+  background-color: #ff5f00;
+}
+.goal.yellow {
   width: 80%;
   height: 100%;
   background-color: #feb700;
-  position: relative;
+}
+.goal-plus-btn {
+  width: 162px;
+  height: 47px;
+  line-height: 47px;
+  vertical-align: top;
 }
 .goal-plus {
   color: #ff5f00;
   font-size: 12px;
+  display: flex;
+  justify-content: flex-start;
+}
+.goal-plus p {
+  margin-left: 5px;
 }
 
 .btn-text {
@@ -192,7 +212,7 @@ body {
 
 .history-scroll {
   width: 40vw;
-  height: 19vw;
+  height: 27vh;
   overflow-y: auto;
 }
 .history-scroll::-webkit-scrollbar {
@@ -240,28 +260,26 @@ body {
 nav {
   background: linear-gradient(to bottom, #00bdb2, #c4e7b8);
   width: 24vw;
-  height: 5vw;
   position: absolute;
   bottom: 0;
-}
-.nav-test {
-  /* margin: auto; */
+  z-index: 1;
 }
 
 /* align-item 으로 사용하려면 높이를 지정해야한다 */
 nav ul {
-  height: 5vw;
+  height: 10vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-nav li {
+.hidden {
+  /* display: none; */
+  transition: all 0.5s;
 }
-
 .management {
   overflow-y: scroll;
-  height: 41vw;
+  height: 75vh;
 }
 .management::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/

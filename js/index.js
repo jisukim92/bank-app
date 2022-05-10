@@ -107,7 +107,7 @@ function 할일(obj) {
 }
 
 //////////////////////////////////////////
-//drag Event
+//click Event
 
 // let drageable = false
 // let currentY = 0
@@ -128,89 +128,22 @@ dragBtn.addEventListener('mousedown', function (e) {
   clicked = !clicked
   if (clicked) {
     historywrap.style.top = '90px'
-    historyScroll.style.height = '36vw'
+    historyScroll.style.height = '62vh'
   } else {
     historywrap.style.top = '350px'
-    historyScroll.style.height = '19vw'
+    historyScroll.style.height = '27vh'
   }
 })
 
-// dragBtn.addEventListener(
-//   'mousedown',
-//   function (e) {
-//     e.preventDefault()
-
-//     // //최대값과 최소값
-//     // if (e.clientY < 90) {
-//     //   return
-//     // }
-//     // if (e.clientY > 350) {
-//     //   return
-//     // }
-
-//     // initX = object.offsetLeft
-//     initY = historywrap.offsetTop
-//     // firstX = e.pageX
-//     firstY = e.pageY
-
-//     historywrap.addEventListener('mousemove', dragIt, false)
-
-//     window.addEventListener(
-//       'mouseup',
-//       function () {
-//         historywrap.removeEventListener('mousemove', dragIt, false)
-//       },
-//       false
-//     )
-//   },
-//   false
-// )
-
-// object.addEventListener(
-//   'touchstart',
-//   function (e) {
-//     e.preventDefault()
-//     initX = object.offsetLeft
-//     initY = object.offsetTop
-//     var touch = e.touches
-//     firstX = touch[0].pageX
-//     firstY = touch[0].pageY
-
-//     object.addEventListener('touchmove', swipeIt, false)
-
-//     window.addEventListener(
-//       'touchend',
-//       function (e) {
-//         e.preventDefault()
-//         object.removeEventListener('touchmove', swipeIt, false)
-//       },
-//       false
-//     )
-//   },
-//   false
-// )
-
-// function dragIt(e) {
-//   initYEl.textContent = initY
-//   firstYEl.textContent = firstY
-//   // this.style.left = initX + e.pageX - firstX + 'px'
-//   historywrap.style.top = initY + e.pageY - firstY + 'px'
-//   console.log(historywrap.style.top)
-// }
-
-// // function swipeIt(e) {
-// //   var contact = e.touches
-// //   // this.style.left = initX + contact[0].pageX - firstX + 'px'
-// //   historywrap.style.top = initY + contact[0].pageY - firstY + 'px'
-// // }
-
-// function checkboundary() {
-//   // let outer = slider.getBoundingClientRect()
-//   // let inner = innerSlider.getBoundingClientRect()
-
-//   if (parseInt(historywrap.offsetTop) > 250) {
-//     historywrap.style.top = '350px'
-//   } else if (parseInt(historywrap.offsetTop) < 200) {
-//     historywrap.style.top = '90px'
-//   }
-// }
+//getGraph()
+function getGraph() {
+  console.log('graph')
+  const chartEl = document.querySelector('.hidden')
+  chartEl.style.transform = 'translateY(-753px)'
+}
+//getGraph()
+function getClose() {
+  console.log('close')
+  const chartEl = document.querySelector('.hidden')
+  chartEl.style.transform = 'translateY(0px)'
+}
